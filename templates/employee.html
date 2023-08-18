@@ -7,11 +7,15 @@
 </head>
 <body>
     <div class="card max-auto" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="{{ Employee.photo.url }}" alt="Card image cap">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title">Employer Details</h5>
+          <p class="card-text">{{ Employee.first_name }} {{ Employee.last_name }}</p>
+          <p class="card-text">{{ Employee.designation }}</p>
+          <p class="card-text">{{ Employee.phone_number }}</p>
+        </div>
+        <div>
+            <a class="btn btn-primary" href="{% url 'home' %}" role="button">Back to Home</a>
         </div>
       </div>
 </body>

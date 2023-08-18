@@ -2,9 +2,9 @@ from django.shortcuts import get_object_or_404, render
 from employees.models import Employees
 
 def employees_detail(request, pk):
-    employee = get_object_or_404(Employee, pk=pk)
+    Employee = get_object_or_404(Employees, pk=pk)
     context = {
-        "employee": Employee  
+        "Employee": Employee  
     }
     return render(request, "employee.html", context)
 
