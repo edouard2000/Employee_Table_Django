@@ -6,7 +6,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.home, include("employees.urls")),
+    path("", views.home),
+    path("employees/", include("employees.urls")),
 ]
 
 if settings.DEBUG:
